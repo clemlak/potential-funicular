@@ -4,4 +4,12 @@ out = "out"
 libs = ["lib"]
 remappings = ["/solmate/src=/lib/solmate/src"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[fmt]
+bracket_spacing = true
+int_types = 'long'
+line_length = 80
+multiline_func_header = 'params_first'
+number_underscore = 'thousands'
+quote_style = 'double'
+tab_width = 4
+wrap_comments = true
