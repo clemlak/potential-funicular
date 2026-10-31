@@ -15,6 +15,8 @@ contract ICore {
         uint256 y;
         bool canMove;
         bool canAttack;
+        uint256 resourceInput;
+        uint256 resourceOutput;
     }
 }
 
@@ -29,7 +31,7 @@ contract Core is ICore, ERC1155 {
         hasSpawned[msg.sender] = true;
         uint256 entityId = entitiesCount;
         _mint(msg.sender, entityId, 1, "");
-        entities[entityId] = Entity(x, y, false, false);
+        entities[entityId] = Entity(x, y, false, false, 0, 0);
         entitiesCount++;
     }
 
